@@ -18,9 +18,14 @@ from django.urls import path
 
 from ninja import NinjaAPI
 from lannister.api import router as lannister_router
+from dothraki.api import router as dothraki_router
 
+# create NinjaAPI instance
 api = NinjaAPI()
+
+# register routers with ninjaApi
 api.add_router("/lannister/", lannister_router)
+api.add_router("/dothraki/", dothraki_router)
 
 
 urlpatterns = [
