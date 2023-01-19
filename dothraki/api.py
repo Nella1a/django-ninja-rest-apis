@@ -15,3 +15,10 @@ def horses(request, num: int):
 
     return "\n".join(horses)
 
+@router.get("/food/{item}")
+def food(request, item: str):
+    return f"I love {item}"
+
+@router.get("/drank/{int:count}")
+def drank(request, count):
+    return f"I drank {count} cups of fermented horse milk"
