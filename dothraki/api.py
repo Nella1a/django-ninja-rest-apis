@@ -8,3 +8,10 @@ def ruler(request, gender):
         return "Hello Khal"
 
     return "Hello Khaleesi"
+
+@router.get("/horses")
+def horses(request, num: int):
+    horses = ["horse" for _ in range(num)]
+
+    return "\n".join(horses)
+
