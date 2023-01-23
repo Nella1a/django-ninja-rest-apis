@@ -2,6 +2,7 @@ from ninja import Router
 from targaryen.schemas import DragonOut
 router = Router()
 
+
 @router.get("/dragons", response=list[DragonOut])
 def dragon(request):
     data = [

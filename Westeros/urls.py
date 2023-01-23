@@ -27,7 +27,7 @@ api = NinjaAPI()
 # register routers with ninjaApi
 api.add_router("/lannister/", lannister_router)
 api.add_router("/dothraki/", dothraki_router)
-api.add_router("/targaryen", targaryen_router)
+api.add_router("/targaryen/", targaryen_router)
 
 
 urlpatterns = [

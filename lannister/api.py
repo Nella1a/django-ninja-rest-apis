@@ -1,5 +1,6 @@
 from ninja import Router
 
+
 router = Router()
 
 # define an api-path-endpoint
