@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from ninja import Router
 
 router = Router()
@@ -22,3 +23,9 @@ def food(request, item: str):
 @router.get("/drank/{int:count}")
 def drank(request, count):
     return f"I drank {count} cups of fermented horse milk"
+
+# customize response object
+@router.get("/swords")
+def swords(request, response:HttpResponse):
+    response.set_cookie("curve", "bendy")
+    return f"Swords are pointy"
